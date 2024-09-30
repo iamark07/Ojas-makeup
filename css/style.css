@@ -197,13 +197,6 @@ h2 {
   }
 }
 
-
-.hero-style .slide-title,
-.hero-style .slide-text,
-.hero-style .slide-btns {
-  /* max-width: 690px; */
-}
-
 .hero-style .slide-title h2 {
   font-size: 80px;
   font-weight: 600;
@@ -327,7 +320,7 @@ header nav ul li a{
 }
 
 .active_btn{
-  color: rgb(219, 39, 119) !important;
+  color: rgb(234, 179, 8) !important;
   /* font-weight: 400; */
 }
 
