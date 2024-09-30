@@ -198,15 +198,15 @@ h2 {
 }
 
 .hero-style .slide-title h2 {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 600;
   line-height: 1;
   color: #ffffff;
   /* margin-left: 60px; */
   text-transform: capitalize;
   transition:all .4s ease;
-  font-family: "Teko", sans-serif;
-  font-weight: 100;
+  /* font-family: "Teko", sans-serif; */
+  font-weight: 300;
 }
 
 @media (max-width: 1199px) {
@@ -217,7 +217,7 @@ h2 {
 
 @media (max-width: 991px) {
   .hero-style .slide-title h2 {
-    font-size: 100px;
+    font-size: 80px;
     /* margin: 0 0 35px; */
     text-align: center;
   }
@@ -225,7 +225,7 @@ h2 {
 
 @media (max-width: 767px) {
   .hero-style .slide-title h2 {
-    font-size: 40px;
+    font-size: 28px;
     /* margin: 0 0 30px; */
     text-align: center;
   }
@@ -233,9 +233,9 @@ h2 {
 
 .hero-style .slide-text p {
   opacity: 0.8;
-  font-family: Rajdhani;
-  font-size: 32px;
-  font-weight: 500;
+  /* font-family: Rajdhani; */
+  /* font-size: 32px; */
+  /* font-weight: 500; */
   line-height: 1.25;
   letter-spacing: normal;
   color: #ffffff;
@@ -313,9 +313,9 @@ a:hover {
 /* header */
 
 header nav ul li a{
-  font-family: "Teko", sans-serif;
+  /* font-family: "Teko", sans-serif; */
   /* font-optical-sizing: auto; */
-  font-weight: 100;
+  font-weight: 300;
   /* font-style: normal; */
 }
 
@@ -325,7 +325,7 @@ header nav ul li a{
 }
 
 
-.long_font{
+/* .long_font{
   font-family: "Long Cang", cursive;
 }
 
@@ -335,6 +335,10 @@ header nav ul li a{
 
 .Didact_font{
   font-family: "Didact Gothic", sans-serif;
+} */
+
+.font_poppins{
+  font-family: "Poppins", sans-serif;
 }
 
 
