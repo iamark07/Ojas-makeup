@@ -50,17 +50,114 @@ window.addEventListener("scroll", function () {
   }
 });
 
-const header = document.querySelector("header");
 
-// Add a scroll event listener
-window.addEventListener("scroll", function () {
-  // Check if the page has been scrolled more than 40px
-  if (window.scrollY > 100) {
-    header.classList.add("bg-zinc-900"); // Show pointer-events-initial
+// payment form open and close
+
+const open_payment_form_section = document.querySelector(".userdata_price_form");
+const close_form_icon = document.querySelector(".close_form_icon");
+
+let payment_form = true;
+function Open_payment_form(){
+  if(payment_form){
+    open_payment_form_section.classList.remove("opacity-0");
+    open_payment_form_section.classList.remove("pointer-events-none");
+    payment_form = false;
+  }
+}
+
+function close_payment_form(){
+  if(payment_form == false){
+  open_payment_form_section.classList.add("opacity-0");
+    open_payment_form_section.classList.add("pointer-events-none");
+    payment_form = true;
+  }
+}
+
+
+document.getElementById('myForm').addEventListener('submit', function(e) {
+  let isValid = true;
+
+  // Name Validation (minimum 5 characters)
+  const name = document.getElementById('name');
+  const nameError = document.getElementById('nameError');
+  if (name.value.length < 5) {
+    nameError.textContent = "Name must be at least 5 characters long.";
+    name.classList.add('error-border');
+    isValid = false;
   } else {
-    header.classList.remove("bg-zinc-900");  // Hide pointer-events-initial
+    nameError.textContent = "";
+    name.classList.remove('error-border');
+  }
+
+  // Phone Validation (minimum 10 digits)
+  const phone = document.getElementById('phone');
+  const phoneError = document.getElementById('phoneError');
+  if (phone.value.length < 10 || phone.value.length > 10) {
+    phoneError.textContent = "Phone number must be exactly 10 digits.";
+    phone.classList.add('error-border');
+    isValid = false;
+  } else {
+    phoneError.textContent = "";
+    phone.classList.remove('error-border');
+  }
+
+  // Email Validation
+  const email = document.getElementById('email');
+  const emailError = document.getElementById('emailError');
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!emailPattern.test(email.value)) {
+    emailError.textContent = "Please enter a valid email address.";
+    email.classList.add('error-border');
+    isValid = false;
+  } else {
+    emailError.textContent = "";
+    email.classList.remove('error-border');
+  }
+
+  // Address Validation (minimum 10 characters)
+  const address = document.getElementById('address');
+  const addressError = document.getElementById('addressError');
+  if (address.value.length < 10) {
+    addressError.textContent = "Address must be at least 10 characters long.";
+    address.classList.add('error-border');
+    isValid = false;
+  } else {
+    addressError.textContent = "";
+    address.classList.remove('error-border');
+  }
+
+  // Amount Validation (1999, 3999, or 6999)
+  const amount = document.getElementById('amount');
+  const amountError = document.getElementById('amountError');
+  if (![1999, 3999, 6999].includes(parseInt(amount.value))) {
+    amountError.textContent = "Amount must be 1999, 3999, or 6999.";
+    amount.classList.add('error-border');
+    isValid = false;
+  } else {
+    amountError.textContent = "";
+    amount.classList.remove('error-border');
+  }
+
+  // Prevent form submission if not valid
+  if (!isValid) {
+    e.preventDefault();
   }
 });
+
+
+
+
+// const header = document.querySelector("header");
+
+// // Add a scroll event listener
+// window.addEventListener("scroll", function () {
+//   // Check if the page has been scrolled more than 40px
+//   if (window.scrollY > 100) {
+//     header.classList.add("bg-zinc-900"); // Show pointer-events-initial
+//   } else {
+//     header.classList.remove("bg-zinc-900");  // Hide pointer-events-initial
+//   }
+// });
 
 
 
