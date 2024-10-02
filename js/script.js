@@ -93,11 +93,12 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
       name.classList.remove('error-border');
   }
 
-  // Phone Validation (minimum 10 digits)
+  // Phone Validation (minimum 10 digits, maximum 13 digits)
   const phone = document.getElementById('phone');
   const phoneError = document.getElementById('phoneError');
-  if (phone.value.length !== 10) {
-      phoneError.textContent = "Phone number must be exactly 10 digits.";
+  const phonePattern = /^[0-9]{10,13}$/; // Only allows numbers between 10-13 digits
+  if (!phonePattern.test(phone.value)) {
+      phoneError.textContent = "Phone number must be between 10 and 13 digits.";
       phone.classList.add('error-border');
       isValid = false;
   } else {
@@ -138,6 +139,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
       window.open(whatsappUrl, '_blank');
   }
 });
+
 
 
 // header nav active class function
