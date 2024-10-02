@@ -74,95 +74,7 @@ function close_payment_form(){
 }
 
 
-// document.getElementById('myForm').addEventListener('submit', function(e) {
-//   let isValid = true;
-
-//   // Name Validation (minimum 5 characters)
-//   const name = document.getElementById('name');
-//   const nameError = document.getElementById('nameError');
-//   if (name.value.length < 5) {
-//     nameError.textContent = "Name must be at least 5 characters long.";
-//     name.classList.add('error-border');
-//     isValid = false;
-//   } else {
-//     nameError.textContent = "";
-//     name.classList.remove('error-border');
-//   }
-
-//   // Phone Validation (minimum 10 digits)
-//   const phone = document.getElementById('phone');
-//   const phoneError = document.getElementById('phoneError');
-//   if (phone.value.length < 10 || phone.value.length > 10) {
-//     phoneError.textContent = "Phone number must be exactly 10 digits.";
-//     phone.classList.add('error-border');
-//     isValid = false;
-//   } else {
-//     phoneError.textContent = "";
-//     phone.classList.remove('error-border');
-//   }
-
-//   // Email Validation
-//   const email = document.getElementById('email');
-//   const emailError = document.getElementById('emailError');
-//   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-//   if (!emailPattern.test(email.value)) {
-//     emailError.textContent = "Please enter a valid email address.";
-//     email.classList.add('error-border');
-//     isValid = false;
-//   } else {
-//     emailError.textContent = "";
-//     email.classList.remove('error-border');
-//   }
-
-//   // Address Validation (minimum 10 characters)
-//   const address = document.getElementById('address');
-//   const addressError = document.getElementById('addressError');
-//   if (address.value.length < 10) {
-//     addressError.textContent = "Address must be at least 10 characters long.";
-//     address.classList.add('error-border');
-//     isValid = false;
-//   } else {
-//     addressError.textContent = "";
-//     address.classList.remove('error-border');
-//   }
-
-//   // Amount Validation (1999, 3999, or 6999)
-//   const amount = document.getElementById('amount');
-//   const amountError = document.getElementById('amountError');
-//   if (![1999, 3999, 6999].includes(parseInt(amount.value))) {
-//     amountError.textContent = "Amount must be 1999, 3999, or 6999.";
-//     amount.classList.add('error-border');
-//     isValid = false;
-//   } else {
-//     amountError.textContent = "";
-//     amount.classList.remove('error-border');
-//   }
-
-//   // Prevent form submission if not valid
-//   if (!isValid) {
-//     e.preventDefault();
-//   }
-// });
-
-
-
-
-// const header = document.querySelector("header");
-
-// // Add a scroll event listener
-// window.addEventListener("scroll", function () {
-//   // Check if the page has been scrolled more than 40px
-//   if (window.scrollY > 100) {
-//     header.classList.add("bg-zinc-900"); // Show pointer-events-initial
-//   } else {
-//     header.classList.remove("bg-zinc-900");  // Hide pointer-events-initial
-//   }
-// });
-
-
-
-
-// nav active link
+// book your event form
 
 document.getElementById('myForm').addEventListener('submit', function(e) {
   e.preventDefault(); // Prevent default form submission
@@ -228,6 +140,8 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
 });
 
 
+// header nav active class function
+
 let nav = document.querySelectorAll("ul li a");
 
 nav.forEach( (active)=>{
@@ -268,56 +182,7 @@ function close_menu_slider(){
 
 
 
-// form validation 
-
-// function validateForm(event) {
-//   // Prevent form submission
-//   event.preventDefault();
-
-//   // Get form values
-//   const name = document.getElementById('name').value.trim();
-//   const email = document.getElementById('email').value.trim();
-//   const message = document.getElementById('message').value.trim();
-
-//   // Get error message elements
-//   const nameError = document.getElementById('nameError');
-//   const emailError = document.getElementById('emailError');
-//   const messageError = document.getElementById('messageError');
-
-//   let isValid = true;
-
-//   // Validate Name
-//   if (name.length < 5) {
-//     nameError.classList.remove('hidden');
-//     isValid = false;
-//   } else {
-//     nameError.classList.add('hidden');
-//   }
-
-//   // Validate Email (basic regex pattern for email validation)
-//   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-//   if (!emailPattern.test(email) || email.length === 0) {
-//     emailError.classList.remove('hidden');
-//     isValid = false;
-//   } else {
-//     emailError.classList.add('hidden');
-//   }
-
-//   // Validate Message
-//   if (message.length < 10) {
-//     messageError.classList.remove('hidden');
-//     isValid = false;
-//   } else {
-//     messageError.classList.add('hidden');
-//   }
-
-//   // If form is valid, submit it
-//   if (isValid) {
-//     alert('Form is valid! Submitting...');
-//     document.getElementById('contactForm').submit();
-//   }
-// }
-
+// contact form validation 
 
 function validateForm(events) {
   // Prevent form submission
@@ -374,3 +239,35 @@ function validateForm(events) {
 
 
 
+
+// plan section qrcode img function
+
+function showQrPlan(plan) {
+  const qrImage = document.getElementById('qrImage');
+  const planQr = document.querySelector('.plan_qr');
+  
+  // Set QR image source based on the selected plan
+  switch(plan) {
+    case 'silver':
+      qrImage.src = 'assets/img/qrcode.png'; // Replace with your silver QR code image path
+      break;
+    case 'vip':
+      qrImage.src = 'assets/img/qrcode.png'; // Replace with your VIP QR code image path
+      break;
+    case 'gold':
+      qrImage.src = 'assets/img/qrcode.png'; // Replace with your gold QR code image path
+      break;
+  }
+
+  // Show QR plan
+  planQr.style.opacity = '1';
+  planQr.style.pointerEvents = 'initial';
+}
+
+function closePlanQr() {
+  const planQr = document.querySelector('.plan_qr');
+
+  // Hide QR plan
+  planQr.style.opacity = '0';
+  planQr.style.pointerEvents = 'none';
+}
