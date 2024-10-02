@@ -232,7 +232,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
 
   // If all fields are valid, proceed to redirect to WhatsApp
   if (isValid) {
-    const phoneNumber = "918002159996"; // Replace with your WhatsApp number
+    const phoneNumber = "919795970589"; // Replace with your WhatsApp number
     const message = `Name: ${name.value}%0APhone: ${phone.value}%0AEmail: ${email.value}%0AAddress: ${address.value}%0AAmount: ${amount.value}`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     window.open(whatsappUrl, '_blank');
