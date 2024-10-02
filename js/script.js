@@ -232,7 +232,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
 
   // If all fields are valid, proceed to redirect to WhatsApp
   if (isValid) {
-    const phoneNumber = "916388402421"; // Replace with your WhatsApp number
+    const phoneNumber = "918002159996"; // Replace with your WhatsApp number
     const message = `Name: ${name.value}%0APhone: ${phone.value}%0AEmail: ${email.value}%0AAddress: ${address.value}%0AAmount: ${amount.value}`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     window.open(whatsappUrl, '_blank');
@@ -282,49 +282,107 @@ function close_menu_slider(){
 
 // form validation 
 
-function validateForm(event) {
-    // Prevent form submission
-    event.preventDefault();
-  
-    // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-  
-    // Get error message elements
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const messageError = document.getElementById('messageError');
-  
-    let isValid = true;
-  
-    // Validate Name
-    if (name.length < 5) {
-      nameError.classList.remove('hidden');
-      isValid = false;
-    } else {
-      nameError.classList.add('hidden');
-    }
-  
-    // Validate Email (basic regex pattern for email validation)
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailPattern.test(email)) {
-      emailError.classList.remove('hidden');
-      isValid = false;
-    } else {
-      emailError.classList.add('hidden');
-    }
-  
-    // Validate Message
-    if (message.length < 10) {
-      messageError.classList.remove('hidden');
-      isValid = false;
-    } else {
-      messageError.classList.add('hidden');
-    }
-  
-    // Submit form if valid
-    if (isValid) {
-      document.getElementById('contactForm').submit();
-    }
+// function validateForm(event) {
+//   // Prevent form submission
+//   event.preventDefault();
+
+//   // Get form values
+//   const name = document.getElementById('name').value.trim();
+//   const email = document.getElementById('email').value.trim();
+//   const message = document.getElementById('message').value.trim();
+
+//   // Get error message elements
+//   const nameError = document.getElementById('nameError');
+//   const emailError = document.getElementById('emailError');
+//   const messageError = document.getElementById('messageError');
+
+//   let isValid = true;
+
+//   // Validate Name
+//   if (name.length < 5) {
+//     nameError.classList.remove('hidden');
+//     isValid = false;
+//   } else {
+//     nameError.classList.add('hidden');
+//   }
+
+//   // Validate Email (basic regex pattern for email validation)
+//   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+//   if (!emailPattern.test(email) || email.length === 0) {
+//     emailError.classList.remove('hidden');
+//     isValid = false;
+//   } else {
+//     emailError.classList.add('hidden');
+//   }
+
+//   // Validate Message
+//   if (message.length < 10) {
+//     messageError.classList.remove('hidden');
+//     isValid = false;
+//   } else {
+//     messageError.classList.add('hidden');
+//   }
+
+//   // If form is valid, submit it
+//   if (isValid) {
+//     alert('Form is valid! Submitting...');
+//     document.getElementById('contactForm').submit();
+//   }
+// }
+
+
+function validateForm(events) {
+  // Prevent form submission
+  events.preventDefault();
+
+  // Get form values
+  const form_name = document.getElementById('form_name').value.trim();
+  const form_email = document.getElementById('form_email').value.trim();
+  const form_message = document.getElementById('form_message').value.trim();
+
+  // Get error message elements
+  const form_nameError = document.getElementById('form_nameError');
+  const form_emailError = document.getElementById('form_emailError');
+  const form_messageError = document.getElementById('form_messageError');
+
+  let isValid = true;
+
+  // Clear existing error messages
+  form_nameError.classList.add('hidden');
+  form_emailError.classList.add('hidden');
+  form_messageError.classList.add('hidden');
+
+  // Validate Name
+  if (form_name.length < 5) {
+    form_nameError.classList.remove('hidden');
+    isValid = false;
   }
+
+  // Validate Email
+  const form_emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!form_emailPattern.test(form_email)) {
+    form_emailError.classList.remove('hidden');
+    isValid = false;
+  }
+
+  // Validate Message
+  if (form_message.length < 10) {
+    form_messageError.classList.remove('hidden');
+    isValid = false;
+  }
+
+  // Submit form if valid
+  if (isValid) {
+    const form_whatsappMessage = `Name: ${form_name}\nEmail: ${form_email}\nMessage: ${form_message}`;
+    const form_whatsappNumber = '918002159996'; // Replace with your WhatsApp number
+    const form_whatsappUrl = `https://api.whatsapp.com/send?phone=${form_whatsappNumber}&text=${encodeURIComponent(form_whatsappMessage)}`;
+
+    // Redirect to WhatsApp
+    window.open(form_whatsappUrl, '_blank');
+    alert('Message sent to WhatsApp!');
+  }
+}
+
+
+
+

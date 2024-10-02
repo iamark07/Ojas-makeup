@@ -226,8 +226,6 @@
 
       </div>
       <!-- end swiper-wrapper -->
-
-      <!-- swiper controls -->
       <div
         class="swiper_btn_controller w-full h-full p-5 flex gap-3 lg:justify-between items-end lg:items-center absolute top-0 left-0">
         <div class="swiper-button-prev !border-white">
@@ -261,6 +259,11 @@
             <a href="https://www.facebook.com/profile.php?id=61566266825108" target="_blank">
               <i
                 class="ri-facebook-fill text-white w-10 h-10 rounded-full flex items-center justify-center border border-solid border-gray-600 transition-all duration-300 hover:border-white"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://in.pinterest.com/glitzycelebrations/" target="_blank">
+              <i class="ri-pinterest-line text-white w-10 h-10 rounded-full flex items-center justify-center border border-solid border-gray-600 transition-all duration-300 hover:border-white"></i>
             </a>
           </li>
         </ul>
@@ -406,8 +409,7 @@
     <div
       class="senior_service_card_container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-10 lg:gap-5 xl:gap-10"
       data-aos="fade-up">
-      <div
-        class="featured_class_card col-span-1 bg-zinc-900 border-b border-gray-900 hover:border-yellow-500 transition-all duration-300 flex flex-col items-center">
+      <div class="featured_class_card relative col-span-1 bg-zinc-900 border-b border-gray-900 hover:border-yellow-500 transition-all duration-300 flex flex-col items-center !pb-20">
         <h3 class="font_poppins text-white text-center transition-all duration-300 text-lg p-5 bg-gray-500 w-full">
           SILVER
         </h3>
@@ -422,10 +424,11 @@
           <li class="text-white font_poppins text-md"><input type="checkbox" class="me-3 cursor-pointer">Tea & Lunch
           </li>
         </ul>
+        <button class="absolute bottom-0 left-0 bg-gray-700 text-white p-5 w-full text-lg font_poppins">Buy</button>
 
       </div>
       <div
-        class="featured_class_card col-span-1 bg-zinc-900 border-b border-gray-900 hover:border-yellow-500 transition-all duration-300 flex flex-col items-center">
+        class="relative featured_class_card col-span-1 bg-zinc-900 border-b border-gray-900 hover:border-yellow-500 transition-all duration-300 flex flex-col items-center !pb-20">
         <h3
           class="font_poppins text-white text-center transition-all duration-300 text-lg p-5 bg-black border boreder-gray-950 w-full">
           VIP
@@ -445,10 +448,10 @@
           <li class="text-white font_poppins text-md"><input type="checkbox" class="me-3 cursor-pointer">Tea & Lunch
           </li>
         </ul>
-
+        <button class="absolute bottom-0 left-0 bg-gray-700 text-white p-5 w-full text-lg font_poppins">Buy</button>
       </div>
       <div
-        class="featured_class_card col-span-1 bg-zinc-900 border-b border-gray-900 hover:border-yellow-500 transition-all duration-300 flex flex-col items-center">
+        class="relative featured_class_card col-span-1 bg-zinc-900 border-b border-gray-900 hover:border-yellow-500 transition-all duration-300 flex flex-col items-center !pb-20">
         <h3 class="font_poppins text-white text-center transition-all duration-300 text-lg p-5 bg-yellow-600 w-full">
           GOLD
         </h3>
@@ -463,6 +466,7 @@
           <li class="text-white font_poppins text-md"><input type="checkbox" class="me-3 cursor-pointer">Tea & Lunch
           </li>
         </ul>
+        <button class="absolute bottom-0 left-0 bg-gray-700 text-white p-5 w-full text-lg font_poppins">Buy</button>
       </div>
     </div>
   </section>
@@ -803,32 +807,28 @@
         </p>
         <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5" onsubmit="return validateForm(event)">
           <div class="input_box col-span-1">
-            <input type="text" id="name" placeholder="Name"
-              class="w-full p-4 bg-transparent border-b border-zinc-700 outline-none text-white font_poppins">
-            <p id="nameError" class="text-red-500 text-sm mt-1 hidden font_poppins">Name must be at least 5 characters
-              long.</p>
+            <input type="text" id="form_name" placeholder="Name" class="w-full p-4 bg-transparent border-b border-zinc-700 outline-none text-white font_poppins">
+            <p id="form_nameError" class="text-red-500 text-sm mt-1 hidden font_poppins">Name must be at least 5 characters long.</p>
           </div>
+          
           <div class="input_box col-span-1">
-            <input type="email" id="email" placeholder="Email"
-              class="w-full p-4 bg-transparent border-b border-zinc-700 outline-none text-white font_poppins">
-            <p id="emailError" class="text-red-500 text-sm mt-1 hidden font_poppins">Please enter a valid email address.
-            </p>
+            <input type="email" id="form_email" placeholder="Email" class="w-full p-4 bg-transparent border-b border-zinc-700 outline-none text-white font_poppins">
+            <p id="form_emailError" class="text-red-500 text-sm mt-1 hidden font_poppins">Please enter a valid email address.</p>
           </div>
+          
           <div class="input_box col-span-1 md:col-span-2">
-            <textarea id="message" placeholder="Message"
-              class="w-full p-4 bg-transparent border-b border-zinc-700 outline-none text-white h-32 font_poppins"></textarea>
-            <p id="messageError" class="text-red-500 text-sm mt-1 hidden font_poppins">Message must be at least 10
-              characters long.</p>
+            <textarea id="form_message" placeholder="Message" class="w-full p-4 bg-transparent border-b border-zinc-700 outline-none text-white h-32 font_poppins"></textarea>
+            <p id="form_messageError" class="text-red-500 text-sm mt-1 hidden font_poppins">Message must be at least 10 characters long.</p>
+          </div>
+          
+          <div class="input_submit_btn col-span-1">
+            <input type="submit" value="Send Message" class="bg-yellow-500 text-white py-4 px-7 text-lg rounded-sm font_poppins cursor-pointer w-full">
           </div>
           <div class="input_submit_btn col-span-1">
-            <input type="submit" value="Send Message"
-              class="bg-yellow-500 text-white py-4 px-7 text-lg rounded-sm font_poppins cursor-pointer w-full">
-          </div>
-          <div class="input_submit_btn col-span-1">
-            <a href="https://wa.me/8002159996?text=Hello, I would like to inquire about..." target="_blank"
-              class="w-full"><button type="button"
-                class="w-full bg-yellow-500 text-white py-4 px-7 text-lg rounded-sm font_poppins cursor-pointer">Whatsapp
-                Us</button></a>
+            <a href="https://wa.me/918002159996?text=Hello, I would like to inquire about..." target="_blank"
+              class="w-full">
+              <button type="button" class="w-full bg-yellow-500 text-white py-4 px-7 text-lg rounded-sm font_poppins cursor-pointer">Whatsapp Us</button>
+            </a>
           </div>
         </form>
       </div>
@@ -902,6 +902,11 @@
           <li>
             <a href="https://www.facebook.com/profile.php?id=61566266825108" target="_blank">
               <i class="ri-facebook-fill text-white text-xl"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://in.pinterest.com/glitzycelebrations/" target="_blank">
+              <i class="ri-pinterest-line text-white text-xl"></i>
             </a>
           </li>
         </ul>
