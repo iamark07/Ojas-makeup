@@ -198,7 +198,7 @@ h2 {
 }
 
 .hero-style .slide-title h2 {
-  font-size: 60px;
+  font-size: 48px;
   font-weight: 600;
   line-height: 1;
   color: #ffffff;
@@ -206,18 +206,18 @@ h2 {
   text-transform: capitalize;
   transition:all .4s ease;
   /* font-family: "Teko", sans-serif; */
-  font-weight: 300;
+  font-weight: 500;
 }
 
 @media (max-width: 1199px) {
   .hero-style .slide-title h2 {
-    font-size: 80px;
+    font-size: 48px;
   }
 }
 
 @media (max-width: 991px) {
   .hero-style .slide-title h2 {
-    font-size: 80px;
+    font-size: 44px;
     /* margin: 0 0 35px; */
     text-align: center;
   }
@@ -225,7 +225,7 @@ h2 {
 
 @media (max-width: 767px) {
   .hero-style .slide-title h2 {
-    font-size: 28px;
+    font-size: 23px;
     /* margin: 0 0 30px; */
     text-align: center;
   }
