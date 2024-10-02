@@ -167,8 +167,12 @@
                 <!-- <h4 class="text-center w-full font_poppins text-white text-2xl my-3">5th Jan, 2025</h4> -->
                 <p class="font_poppins text-center font_poppins text-md font-[300] md:text-lg font_poppins mt-2">Where
                   Style Meets Glamour. Join Us for the Hottest Fashion Trends."</p>
-                <button class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block"
-                  onclick="Open_payment_form()">Book Your Event</button>
+                <!-- <button class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block"
+                  onclick="Open_payment_form()">Book Your Event</button> -->
+                <a href="#plans_section"><button
+                    class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block">Grab your
+                    seat now</button>
+                </a>
               </div>
             </div>
           </div>
@@ -201,11 +205,15 @@
                 </h2>
                 <p class="font_poppins text-center font_poppins text-md font-[300] md:text-lg font_poppins mt-2">"Learn
                   from the Best. Master Your Art with Leading Experts"</p>
-                <button class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block"
-                  onclick="Open_payment_form()">Book Your Event</button>
+                <!-- <button class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block"
+                  onclick="Open_payment_form()">Book Your Event</button> -->
                 <!-- <button class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block"
                   onclick="Open_payment_form()">Grab your
                   seat now</button> -->
+                <a href="#plans_section"><button
+                    class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block">Grab your
+                    seat now</button>
+                </a>
               </div>
             </div>
           </div>
@@ -222,8 +230,12 @@
                 </h2>
                 <p class="font_poppins text-center font_poppins text-md font-[300] md:text-lg font_poppins  mt-2">
                   Delivering Unforgettable Corporate Experiences.. </p>
-                <button class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block"
-                  onclick="Open_payment_form()">Book Your Event</button>
+                <!-- <button class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block"
+                  onclick="Open_payment_form()">Book Your Event</button> -->
+                <a href="#plans_section"><button
+                    class="mt-5 font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block">Grab your
+                    seat now</button>
+                </a>
               </div>
             </div>
           </div>
@@ -259,7 +271,8 @@
           </li>
           <li>
             <a href="https://www.linkedin.com/in/glitzy-celebrations-718969330" target="_blank">
-              <i class="ri-linkedin-fill text-white w-10 h-10 rounded-full flex items-center justify-center border border-solid border-gray-600 transition-all duration-300 hover:border-white"></i>
+              <i
+                class="ri-linkedin-fill text-white w-10 h-10 rounded-full flex items-center justify-center border border-solid border-gray-600 transition-all duration-300 hover:border-white"></i>
             </a>
           </li>
           <li>
@@ -285,55 +298,6 @@
     </div>
   </section>
   <!-- hero section end -->
-
-  <!-- user payement section start-->
-
-  <div
-    class="userdata_price_form fixed opacity-0 transition-all duration-300 pointer-events-none top-0 left-0 w-full flex flex-col overflow-auto h-[100dvh] bg-zinc-900 backdrop-blur-xl bg-opacity-70 z-[999] p-5 sm:px-10 lg:px-20">
-    <i class="close_form_icon ri-close-circle-line text-2xl text-white absolute top-14 right-10 cursor-pointer"
-      onclick="close_payment_form()"></i>
-    <img src="assets/img/logo.png" alt="" class="w-32">
-    <div class="grid grid-cols-9 gap-10 md:gap-14 mt-14">
-      <div class="user_form_container col-span-9 md:col-span-5 order-2 md:order-1">
-        <!-- <h2 class="text-yellow-500 text-lg md:text-2xl lg:text-3xl font-semibold font_poppins">Registration:</h2> -->
-        <form id="myForm" class="grid grid-cols-2 gap-5 mt-5 w-full" novalidate>
-          <div class="user_input col-span-2 w-full">
-            <input type="text" id="name" class="w-full px-5 py-3 font_poppins outline-none" placeholder="Name">
-            <span id="nameError" class="error font-semibold font_poppins"></span>
-          </div>
-          <div class="user_input col-span-2 sm:col-span-1 w-full">
-            <input type="number" id="phone" class="w-full px-5 py-3 font_poppins outline-none" placeholder="Phone">
-            <span id="phoneError" class="error font-semibold font_poppins"></span>
-          </div>
-          <div class="user_input col-span-2 sm:col-span-1 w-full">
-            <input type="email" id="email" class="w-full px-5 py-3 font_poppins outline-none" placeholder="Email">
-            <span id="emailError" class="error font-semibold font_poppins"></span>
-          </div>
-          <div class="user_input col-span-2 w-full">
-            <input type="text" id="address" class="w-full px-5 py-3 font_poppins outline-none" placeholder="Address">
-            <span id="addressError" class="error font-semibold font_poppins"></span>
-          </div>
-          <div class="user_input col-span-2 w-full">
-            <input type="submit"
-              class="w-full px-5 py-3 font_poppins outline-none bg-yellow-500 text-white cursor-pointer" value="Submit">
-          </div>
-        </form>
-      </div>
-      <div class="qrcode col-span-9 md:col-span-4 flex justify-center flex-col gap-10 order-1 md:order-2">
-        <img src="assets/img/qr_code_poster.jpeg" alt="" class="">
-        <div class="flex justify-between gap-5 mt-3">
-          <a href="assets/img/qr_code_poster.jpeg" download="downloaded_image.jpg">
-            <button class="font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block">Download</button>
-          </a>
-          <a href="https://wa.me/919795970589?text=Hello, I would like to inquire about..." target="_blank" class="">
-            <button type="button" class="font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block">Whatsapp
-              Us</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- user payement section end -->
 
   <!-- about section start -->
   <section id="glitzy_celebrations_section"
@@ -445,8 +409,7 @@
           </li>
         </ul>
         <button class="absolute bottom-0 left-0 bg-gray-700 text-white p-5 w-full text-lg font_poppins"
-          onclick="showQrPlan('silver')">Grab Your Deal
-          Now</button>
+          onclick="Open_payment_form()">Book Now</button>
       </div>
       <div
         class="relative featured_class_card col-span-1 bg-zinc-900 border-b border-gray-900 hover:border-yellow-500 transition-all duration-300 flex flex-col items-center !pb-20">
@@ -466,7 +429,7 @@
           </li>
         </ul>
         <button class="absolute bottom-0 left-0 bg-gray-700 text-white p-5 w-full text-lg font_poppins"
-          onclick="showQrPlan('gold')">Grab Your Deal
+          onclick="Open_payment_form()">Book
           Now</button>
       </div>
       <div
@@ -494,15 +457,64 @@
           </li>
         </ul>
         <button class="absolute bottom-0 left-0 bg-gray-700 text-white p-5 w-full text-lg font_poppins"
-          onclick="showQrPlan('vip')">Grab Your Deal
-          Now</button>
+          onclick="Open_payment_form()">Book Now</button>
       </div>
   </section>
-
   <!-- Plans section end-->
 
+  <!-- user payement section start-->
+
+  <div
+    class="userdata_price_form fixed opacity-0 transition-all duration-300 pointer-events-none top-0 left-0 w-full flex flex-col overflow-auto h-[100dvh] bg-zinc-900 backdrop-blur-xl bg-opacity-70 z-[999] p-5 sm:px-10 lg:px-20">
+    <i class="close_form_icon ri-close-circle-line text-2xl text-white absolute top-14 right-10 cursor-pointer"
+      onclick="close_payment_form()"></i>
+    <img src="assets/img/logo.png" alt="" class="w-32">
+    <div class="grid grid-cols-9 gap-10 md:gap-14 mt-14">
+      <div class="user_form_container col-span-9 md:col-span-5 order-2 md:order-1">
+        <!-- <h2 class="text-yellow-500 text-lg md:text-2xl lg:text-3xl font-semibold font_poppins">Registration:</h2> -->
+        <form id="myForm" class="grid grid-cols-2 gap-5 mt-5 w-full" novalidate>
+          <div class="user_input col-span-2 w-full">
+            <input type="text" id="name" class="w-full px-5 py-3 font_poppins outline-none" placeholder="Name">
+            <span id="nameError" class="error font-semibold font_poppins"></span>
+          </div>
+          <div class="user_input col-span-2 sm:col-span-1 w-full">
+            <input type="number" id="phone" class="w-full px-5 py-3 font_poppins outline-none" placeholder="Phone">
+            <span id="phoneError" class="error font-semibold font_poppins"></span>
+          </div>
+          <div class="user_input col-span-2 sm:col-span-1 w-full">
+            <input type="email" id="email" class="w-full px-5 py-3 font_poppins outline-none" placeholder="Email">
+            <span id="emailError" class="error font-semibold font_poppins"></span>
+          </div>
+          <div class="user_input col-span-2 w-full">
+            <input type="text" id="address" class="w-full px-5 py-3 font_poppins outline-none" placeholder="Address">
+            <span id="addressError" class="error font-semibold font_poppins"></span>
+          </div>
+          <div class="user_input col-span-2 w-full">
+            <input type="submit"
+              class="w-full px-5 py-3 font_poppins outline-none bg-yellow-500 text-white cursor-pointer" value="Submit">
+          </div>
+        </form>
+      </div>
+      <div class="qrcode col-span-9 md:col-span-4 flex justify-center flex-col gap-10 order-1 md:order-2">
+        <img src="assets/img/qr_code_poster.jpeg" alt="" class="">
+        <p class="text-white text-lg font_poppins">Share your screenshot with us</p>
+        <div class="flex justify-between gap-5 mt-1">
+          <a href="assets/img/qr_code_poster.jpeg" download="downloaded_image.jpg">
+            <button class="font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block">Download</button>
+          </a>
+          <a href="https://wa.me/919795970589?text=Hello, I would like to inquire about..." target="_blank" class="">
+            <button type="button" class="font_poppins text-sm text-white bg-yellow-500 px-7 py-4 inline-block">Whatsapp
+              Us</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- user payement section end -->
+
   <!-- plans qr code start section -->
-  <div class="plan_qr fixed opacity-0 transition-all duration-300 pointer-events-none top-0 left-0 w-full flex flex-col overflow-auto h-[100dvh] bg-zinc-900 backdrop-blur-xl bg-opacity-70 z-[999] py-10 px-5 sm:px-10 lg:px-20">
+  <div
+    class="plan_qr fixed opacity-0 transition-all duration-300 pointer-events-none top-0 left-0 w-full flex flex-col overflow-auto h-[100dvh] bg-zinc-900 backdrop-blur-xl bg-opacity-70 z-[999] py-10 px-5 sm:px-10 lg:px-20">
     <i class="close_form_icon ri-close-circle-line text-2xl text-white absolute top-14 right-10 cursor-pointer"
       onclick="closePlanQr()"></i>
     <div class="grid grid-cols-9 gap-10 md:gap-14 mt-20">

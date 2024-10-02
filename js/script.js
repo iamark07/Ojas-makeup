@@ -240,34 +240,34 @@ function validateForm(events) {
 
 
 
-// plan section qrcode img function
+// // plan section qrcode img function
 
-function showQrPlan(plan) {
-  const qrImage = document.getElementById('qrImage');
-  const planQr = document.querySelector('.plan_qr');
+// function showQrPlan(plan) {
+//   const qrImage = document.getElementById('qrImage');
+//   const planQr = document.querySelector('.plan_qr');
   
-  // Set QR image source based on the selected plan
-  switch(plan) {
-    case 'silver':
-      qrImage.src = 'assets/img/qrcode.png'; // Replace with your silver QR code image path
-      break;
-    case 'vip':
-      qrImage.src = 'assets/img/qrcode.png'; // Replace with your VIP QR code image path
-      break;
-    case 'gold':
-      qrImage.src = 'assets/img/qrcode.png'; // Replace with your gold QR code image path
-      break;
-  }
+//   // Set QR image source based on the selected plan
+//   switch(plan) {
+//     case 'silver':
+//       qrImage.src = 'assets/img/qrcode.png'; // Replace with your silver QR code image path
+//       break;
+//     case 'vip':
+//       qrImage.src = 'assets/img/qrcode.png'; // Replace with your VIP QR code image path
+//       break;
+//     case 'gold':
+//       qrImage.src = 'assets/img/qrcode.png'; // Replace with your gold QR code image path
+//       break;
+//   }
 
-  // Show QR plan
-  planQr.style.opacity = '1';
-  planQr.style.pointerEvents = 'initial';
-}
+//   // Show QR plan
+//   planQr.style.opacity = '1';
+//   planQr.style.pointerEvents = 'initial';
+// }
 
-function closePlanQr() {
-  const planQr = document.querySelector('.plan_qr');
+// function closePlanQr() {
+//   const planQr = document.querySelector('.plan_qr');
 
-  // Hide QR plan
-  planQr.style.opacity = '0';
-  planQr.style.pointerEvents = 'none';
-}
+//   // Hide QR plan
+//   planQr.style.opacity = '0';
+//   planQr.style.pointerEvents = 'none';
+// }
