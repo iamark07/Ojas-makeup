@@ -173,24 +173,24 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   const name = document.getElementById('name');
   const nameError = document.getElementById('nameError');
   if (name.value.length < 5) {
-    nameError.textContent = "Name must be at least 5 characters long.";
-    name.classList.add('error-border');
-    isValid = false;
+      nameError.textContent = "Name must be at least 5 characters long.";
+      name.classList.add('error-border');
+      isValid = false;
   } else {
-    nameError.textContent = "";
-    name.classList.remove('error-border');
+      nameError.textContent = "";
+      name.classList.remove('error-border');
   }
 
   // Phone Validation (minimum 10 digits)
   const phone = document.getElementById('phone');
   const phoneError = document.getElementById('phoneError');
   if (phone.value.length !== 10) {
-    phoneError.textContent = "Phone number must be exactly 10 digits.";
-    phone.classList.add('error-border');
-    isValid = false;
+      phoneError.textContent = "Phone number must be exactly 10 digits.";
+      phone.classList.add('error-border');
+      isValid = false;
   } else {
-    phoneError.textContent = "";
-    phone.classList.remove('error-border');
+      phoneError.textContent = "";
+      phone.classList.remove('error-border');
   }
 
   // Email Validation
@@ -198,44 +198,32 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   const emailError = document.getElementById('emailError');
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (!emailPattern.test(email.value)) {
-    emailError.textContent = "Please enter a valid email address.";
-    email.classList.add('error-border');
-    isValid = false;
+      emailError.textContent = "Please enter a valid email address.";
+      email.classList.add('error-border');
+      isValid = false;
   } else {
-    emailError.textContent = "";
-    email.classList.remove('error-border');
+      emailError.textContent = "";
+      email.classList.remove('error-border');
   }
 
   // Address Validation (minimum 10 characters)
   const address = document.getElementById('address');
   const addressError = document.getElementById('addressError');
   if (address.value.length < 10) {
-    addressError.textContent = "Address must be at least 10 characters long.";
-    address.classList.add('error-border');
-    isValid = false;
+      addressError.textContent = "Address must be at least 10 characters long.";
+      address.classList.add('error-border');
+      isValid = false;
   } else {
-    addressError.textContent = "";
-    address.classList.remove('error-border');
-  }
-
-  // Amount Validation (1999, 3999, or 6999)
-  const amount = document.getElementById('amount');
-  const amountError = document.getElementById('amountError');
-  if (![1999, 3999, 6999].includes(parseInt(amount.value))) {
-    amountError.textContent = "Amount must be 1999, 3999, or 6999.";
-    amount.classList.add('error-border');
-    isValid = false;
-  } else {
-    amountError.textContent = "";
-    amount.classList.remove('error-border');
+      addressError.textContent = "";
+      address.classList.remove('error-border');
   }
 
   // If all fields are valid, proceed to redirect to WhatsApp
   if (isValid) {
-    const phoneNumber = "919795970589"; // Replace with your WhatsApp number
-    const message = `Name: ${name.value}%0APhone: ${phone.value}%0AEmail: ${email.value}%0AAddress: ${address.value}%0AAmount: ${amount.value}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
-    window.open(whatsappUrl, '_blank');
+      const phoneNumber = "919795970589"; // Replace with your WhatsApp number
+      const message = `Name: ${name.value}%0APhone: ${phone.value}%0AEmail: ${email.value}%0AAddress: ${address.value}`;
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+      window.open(whatsappUrl, '_blank');
   }
 });
 
