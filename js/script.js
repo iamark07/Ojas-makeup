@@ -1,35 +1,35 @@
 // page loader 
 
-// Minimum display time for loader in milliseconds (3 seconds)
-const minimumLoaderTime = 3000;
+// // Minimum display time for loader in milliseconds (3 seconds)
+// const minimumLoaderTime = 3000;
 
-window.addEventListener('load', function() {
-  const loader = document.querySelector('.page_loader');
+// window.addEventListener('load', function() {
+//   const loader = document.querySelector('.page_loader');
 
-  // Get the current time when the page starts loading
-  const startTime = Date.now();
+//   // Get the current time when the page starts loading
+//   const startTime = Date.now();
 
-  // Ensure loader shows for at least 3 seconds
-  setTimeout(() => {
-    // Check if the page has fully loaded
-    const timeElapsed = Date.now() - startTime;
+//   // Ensure loader shows for at least 3 seconds
+//   setTimeout(() => {
+//     // Check if the page has fully loaded
+//     const timeElapsed = Date.now() - startTime;
 
-    if (timeElapsed >= minimumLoaderTime) {
-      hideLoader(); // Hide loader immediately after 3 seconds
-    } else {
-      // If page loads before 3 seconds, wait for the remaining time
-      setTimeout(hideLoader, minimumLoaderTime - timeElapsed);
-    }
-  }, minimumLoaderTime);
+//     if (timeElapsed >= minimumLoaderTime) {
+//       hideLoader(); // Hide loader immediately after 3 seconds
+//     } else {
+//       // If page loads before 3 seconds, wait for the remaining time
+//       setTimeout(hideLoader, minimumLoaderTime - timeElapsed);
+//     }
+//   }, minimumLoaderTime);
 
-  // Function to hide loader (set opacity to 0 and disable pointer events)
-  function hideLoader() {
-    loader.style.opacity = '0';
-    loader.style.pointerEvents = 'none'; // Make it non-interactive
+//   // Function to hide loader (set opacity to 0 and disable pointer events)
+//   function hideLoader() {
+//     loader.style.opacity = '0';
+//     loader.style.pointerEvents = 'none'; // Make it non-interactive
 
-    // No need to use display: none; we just let it fade out with opacity
-  }
-});
+//     // No need to use display: none; we just let it fade out with opacity
+//   }
+// });
 
 
 // get to top btn
